@@ -73,7 +73,7 @@ def send_request(date_from, date_to):
 				print(f"		{wanted_types}")
 				for file in files:
 					if file['recording_type'] in wanted_types:
-						filename = slugify(name) + '.' + file['file_extension'].lower()
+						filename = f'{slugify(name)}.' + file['file_extension'].lower()
 						size_zoom = file['file_size']
 						size_bb = b2_file_size(filename)
 						try:
